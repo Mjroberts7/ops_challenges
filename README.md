@@ -1,2 +1,2 @@
-# ops_challenges
+# OPS_challenges
 Ops Challenges
