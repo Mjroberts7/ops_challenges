@@ -11,7 +11,7 @@
 # Declaration of functions
 
 get_login_history() {
-    login_history=$(grep -v "sshd" /var/log/auth.log)
+    login_history=last
     echo login_history
     echo "This is the login history."
 }
