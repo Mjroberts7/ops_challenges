@@ -5,7 +5,7 @@
 # Date of latest revision:      10/31/2023
 # Purpose:                      to use lshw to grep information from our system components
 # Execution:			        bash ops7.sh or ./ops7.sh chmod -x ops7.sh
-# Documentation                 information for chatGPT is here 
+# Documentation                 information for chatGPT is here https://chat.openai.com/c/2ee6eabe-fdd9-4614-b4a9-c6c2078f5547
 
 
 # Declaration of variables
