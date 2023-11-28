@@ -1,6 +1,6 @@
 # OPS_challenges
 
-### ops challenges 
+### 201 ops challenges 
 1. This is the first challenge that was simply creating a variable and outputing it
 -[first bash shell file](helloworld.sh)
 2. Created a function that ouptuted the three last instances of login history
@@ -23,3 +23,6 @@
 -[individual powershell commands for Enable/Disabling features and rules](ops11_endpoints.ps1)
 
 I am learning these skills to strengthen my scripting/coding skills. I am hoping these will come in handy in a career setting in any field. I am learning multiple scripting languages to help with automation/efficiency. Some of these can help when you are tweaking settings in administration or security. I would like to learn more Powershell commands even though I know how to look them up if I need to, I would like to have more memorized. I hope to be able to improve my ablility of using scripting to get Event Log commands or kernel based troubleshooting. This can help if I want to continue helping people with computer issues. 
+
+## 301 OP's challenges
+- [Append and Log Files](301OpsChal1.sh)
