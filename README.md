@@ -25,7 +25,7 @@
 I am learning these skills to strengthen my scripting/coding skills. I am hoping these will come in handy in a career setting in any field. I am learning multiple scripting languages to help with automation/efficiency. Some of these can help when you are tweaking settings in administration or security. I would like to learn more Powershell commands even though I know how to look them up if I need to, I would like to have more memorized. I hope to be able to improve my ablility of using scripting to get Event Log commands or kernel based troubleshooting. This can help if I want to continue helping people with computer issues. 
 
 ## 301 OP's challenges
-1. -[Append and Log Files](ops-301d14\:Challenge1.sh)
-2. -[Changing folder/file permissions with chmod](ops-301d14\:Challenge2.sh)
-3. -[Bash multi-conditional](ops-301d14\:Challenge3.sh)
-4. -[Compress/truncate and check file sizes](ops-301d14\:Challenge4.sh)
+1. -[Append and Log Files](ops-301d14_Challenge1.sh)
+2. -[Changing folder/file permissions with chmod](ops-301d14_Challenge2.sh)
+3. -[Bash multi-conditional](ops-301d14_Challenge3.sh)
+4. -[Compress/truncate and check file sizes](ops-301d14_Challenge4.sh)
