@@ -28,3 +28,4 @@ I am learning these skills to strengthen my scripting/coding skills. I am hoping
 - [Append and Log Files](ops-301d14:Challenge1.sh)
 - [Changing folder/file permissions with chmod](ops-301d14:Challenge2.sh)
 - [Bash multi-conditional](ops-301d14:Challenge3.sh)
+- [Compress/truncate and check file sizes](ops-301d14:Challenge4.sh)
