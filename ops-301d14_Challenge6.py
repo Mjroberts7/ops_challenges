@@ -13,9 +13,10 @@ import os
 
 
 # Declaration of variables
-
-### Read user input here into a variable
-userinput = input('what is the file path? ')
+inputDir = str(input('what do you want the new dir to be? '))
+os.makedirs(inputDir)
+### Read user input here into a variable # input the inputDir
+userinput = str(input('what is the path to the dir to check? '))
 # Declaration of functions
 
     
@@ -35,3 +36,5 @@ def pyFunction(testdir):
 ### Pass the variable into the function here
 pyFunction(userinput)
 # End
+# got rid of the test directory after i checked it
+os.rmdir(inputDir)
