@@ -15,7 +15,7 @@ $lastName="Ferdinand"
 $franzUser = @{
     -Name = $fullName 
     -SamAccountName "ferdi" 
-    -UserPrincipalName "ferdi@GlobeXpower.com" 
+    -UserPrincipalName "ferdi@corp.globexpower.com" 
     -DisplayName $fullName 
     -GivenName $firstName 
     -Surname $lastName 
