@@ -7,6 +7,7 @@ Import-Module  ActiveDirectory
 # Execution:			        run ops-301d14_Challenge12.ps1 on powershell 
 # Documentation                 https://learn.microsoft.com/en-us/powershell/module/activedirectory/new-aduser?view=windowsserver2022-ps 
 
+#create a new user in AD with automation in powershell
 $fullName="Franz Ferdinand"
 $firstName="Franz"
 $lastName="Ferdinand"
