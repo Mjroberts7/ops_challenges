@@ -2,11 +2,10 @@
 # Import libraries
 import os
 import datetime
-# Script Name:                  ops-301d14_Challenge13.py
-# Author:                       Michael Roberts 
+# Script Name:                  ops-301d14_Challenge14.py 
 # Date of latest revision:      12/14/2023
 # Purpose:                      Malware Analysis
-# Execution:			        python3 ops-301d14_Challenge13.py 
+# Execution:			        python3 ops-301d14_Challenge14.py 
 # Documentation     
 
 SIGNATURE = "VIRUS"
