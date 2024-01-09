@@ -13,7 +13,7 @@ import time
 
 # Variables
 ipAddress = str(input("What Ip address? "))
-x = 5
+x = 1
 
 # Functions
 def pingFunction(specificip):
@@ -30,6 +30,8 @@ def pingFunction(specificip):
 # Loop
 # while True:
 if __name__ == "__main__":
-    print(pingFunction(ipAddress))
-    time.sleep(2)
-    
+    i = 0
+    while i < 5:
+        print(pingFunction(ipAddress))
+        time.sleep(2)
+        i += 1
