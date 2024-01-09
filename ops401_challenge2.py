@@ -9,7 +9,7 @@ import time
 # Date of latest revision:      01/09/2024
 # Purpose:                      create a python script that transmits pings every two seconds, assigns success or faulure, and prints some output 
 # Execution:			        run the ops401_challenge2.py or python3 ops401_challenge2.py
-# Documentation                 Chap-GPT and slightly helped here 
+# Documentation                 Chap-GPT slightly helped here https://chat.openai.com/share/a9c0cb6d-d9cf-4334-9e24-0352a55c8339
 
 # Variables
 ipAddress = str(input("What Ip address? "))
