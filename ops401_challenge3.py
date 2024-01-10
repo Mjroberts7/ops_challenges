@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+# Libraries
+import smtplib
+#import datetime
+#import os
+#import time
+# import ops401_challenge2
+import getpass
+
+from email.message import EmailMessage
+
+# Script Name:                  ops401_challenge3.py
+# Author:                       Michael Roberts 
+# Date of latest revision:      01/10/2024
+# Purpose:                      create a python script that emails admin if ip is active or inactive 
+# Execution:			        run the ops401_challenge3.py or python3 ops401_challenge3.py
+# Documentation                 This script builds onto ops401_challenge2.py. Chap-GPT slightly helped here 
+# Documentation                 https://www.geeksforgeeks.org/getpass-and-getuser-in-python-password-without-echo/ 
+
+# python3 ops401_challenge2
+# i used a sharklasers temporary email to recieve the email. It just shows that an email was recieved and is for testing.
+def sendEmail(email, p, bodym, b="uadupqbj@sharklasers.com"):
+    msg = EmailMessage()
+    msg['Subject'] = 'This is a test email'
+    msg['From'] = email
+    msg['To'] = b
+    msg.set_content(bodym)
+
+    with smtplib.SMTP('smtp.gmail.com', 587) as server:
+        server.starttls()
+        server.login(email, p)
+        server.send_message(msg)
+
+if __name__ == '__main__':  
+    try:
+        # input for the email
+        emailAddr = str(input("enter sender addr: "))
+        # input for the password
+        passValue = getpass.getpass()
+        # burner email
+        burner = str(input("enter recipient addr: "))
+        # the intended message in the email
+        bod = "If you received this, it is a test"
+
+        sendEmail(emailAddr, passValue, bod, burner)
+
+        print("Email sent, success!")
+    # this handles a multitude of errors. If there is one then the script will just exit
+    except (KeyboardInterrupt, TypeError, ValueError, Exception) as error:
+        print('\nThis value does not work, exiting', error)
+        sys.exit()
