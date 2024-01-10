@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 # Libraries
 import smtplib
 #import datetime
@@ -15,11 +16,15 @@ from email.message import EmailMessage
 # Date of latest revision:      01/10/2024
 # Purpose:                      create a python script that emails admin if ip is active or inactive 
 # Execution:			        run the ops401_challenge3.py or python3 ops401_challenge3.py
-# Documentation                 This script builds onto ops401_challenge2.py. Chap-GPT slightly helped here 
+# Documentation                 This script builds onto ops401_challenge2.py. Chap-GPT slightly helped here https://chat.openai.com/share/74d401e5-f91e-4e8e-9750-f878a62e4b77 
 # Documentation                 https://www.geeksforgeeks.org/getpass-and-getuser-in-python-password-without-echo/ 
+# Documentation                 Roger Hubas code helped here https://github.com/codefellows/seattle-cybersecurity-401d10/blob/main/class-03/challenges/ops_challenge_3_demo.py
 
+# uncomment out this bottom line to import the challenge two from github
 # python3 ops401_challenge2
-# i used a sharklasers temporary email to recieve the email. It just shows that an email was recieved and is for testing.
+
+# i used a sharklasers temporary email to recieve the email. It just shows that an email was recieved 
+# and is for testing. set content will put the variable defined within main into the email body.
 def sendEmail(email, p, bodym, b="uadupqbj@sharklasers.com"):
     msg = EmailMessage()
     msg['Subject'] = 'This is a test email'
@@ -27,6 +32,7 @@ def sendEmail(email, p, bodym, b="uadupqbj@sharklasers.com"):
     msg['To'] = b
     msg.set_content(bodym)
 
+    # connected to the gmail server to send the email.
     with smtplib.SMTP('smtp.gmail.com', 587) as server:
         server.starttls()
         server.login(email, p)
