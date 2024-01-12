@@ -59,7 +59,7 @@ if __name__ == '__main__':
             otherStatus = pingFunction(ipAddress)
             time.sleep(2)
 
-            if "Network Active" in firstStatus or otherStatus != firstStatus:
+            if "Network Active" in firstStatus or "Network Active" in otherStatus:
                 # input for the email
                 emailAddr = str(input("enter sender addr: "))
                 # input for the password
@@ -67,8 +67,17 @@ if __name__ == '__main__':
                 # burner email
                 burner = str(input("enter recipient addr: "))
                 # the intended message in the email
-                bod = "If you received this, it is a test "
-
+                bod = "Network is Active"
+                sendEmail(emailAddr, passValue, bod, burner) 
+            else: 
+                # input for the email
+                emailAddr = str(input("enter sender addr: "))
+                # input for the password
+                passValue = getpass.getpass()
+                # burner email
+                burner = str(input("enter recipient addr: "))
+                # the intended message in the email
+                bod = "Network is down"
                 sendEmail(emailAddr, passValue, bod, burner) 
 
         print("Email sent, success!")
