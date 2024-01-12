@@ -47,7 +47,7 @@ if __name__ == '__main__':
         # burner email
         burner = str(input("enter recipient addr: "))
         # the intended message in the email
-        bod = "If you received this, it is a test"
+        bod = "If you received this, it is a test "
 
         sendEmail(emailAddr, passValue, bod, burner)
 
