@@ -2,9 +2,9 @@
 
 # Libraries
 import smtplib
-#import datetime
-#import os
-#import time
+import datetime
+import os
+import time
 # import ops401_challenge2
 import getpass
 import sys
@@ -38,18 +38,38 @@ def sendEmail(email, p, bodym, b="uadupqbj@sharklasers.com"):
         server.login(email, p)
         server.send_message(msg)
 
+def pingFunction(specificip, x=1):
+    ping = os.system("ping -c " + x + " " + specificip)
+    #curDate = datetime.datetime.now()
+    if ping == 0:
+        success = str("Network Active")
+        print(f'{datetime.datetime.now()}{datetime.time()} {success} to {ipAddress}')
+        return success 
+    else: 
+        failure = str("Network Down")
+        print(f'{datetime.datetime.now()}{datetime.time()} {failure} to {ipAddress}')
+        return failure
+
 if __name__ == '__main__':  
     try:
-        # input for the email
-        emailAddr = str(input("enter sender addr: "))
-        # input for the password
-        passValue = getpass.getpass()
-        # burner email
-        burner = str(input("enter recipient addr: "))
-        # the intended message in the email
-        bod = "If you received this, it is a test "
+        ipAddress = str(input("What Ip address? "))
+        firstStatus = pingFunction(ipAddress) 
 
-        sendEmail(emailAddr, passValue, bod, burner)
+        for i in range(5):
+            otherStatus = pingFunction(ipAddress)
+            time.sleep(2)
+
+            if "Network Active" in firstStatus or otherStatus != firstStatus:
+                # input for the email
+                emailAddr = str(input("enter sender addr: "))
+                # input for the password
+                passValue = getpass.getpass()
+                # burner email
+                burner = str(input("enter recipient addr: "))
+                # the intended message in the email
+                bod = "If you received this, it is a test "
+
+                sendEmail(emailAddr, passValue, bod, burner) 
 
         print("Email sent, success!")
     # this handles a multitude of errors. If there is one then the script will just exit
