@@ -9,8 +9,8 @@
 # Documentation                 Microsoft Documentation https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash?view=powershell-7.4
 
 
-$tempfile = NewTemporaryFile
-hashstring = Read-Host "What string would you like to get the hash of?"
+$tempfile = New-TemporaryFile
+$hashstring = Read-Host "What string would you like to get the hash of?"
 echo "$hashstring" > $tempfile
-Get-FileHash $tempfile | Format-List 
+Get-FileHash -Path $tempfile | Format-List 
 rm $tempfile
