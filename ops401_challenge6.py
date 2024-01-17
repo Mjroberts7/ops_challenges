@@ -20,9 +20,10 @@ message = "variable"
 
 message.encode()
 message.decode()
+key = Fernet.generate_key()
 
 def writekey():
-    key = Fernet.generate_key()
+    
     with open("key.key", "wb") as keyfile:
         keyfile.write(key)
 
