@@ -29,8 +29,6 @@ def writekey():
 def loadkey():
     return open("key.key", "rb").read()
 
-
-
 f = Fernet(key)
 
 # In Python, create a script that utilizes the cryptography library to:
