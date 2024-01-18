@@ -12,7 +12,7 @@ from cryptography.fernet import Fernet
 # Date of latest revision:      01/17/2024
 # Purpose:                      create a python script that uses fernet and encryption
 # Execution:			        run the ops401_challenge7.py or python3 ops401_challenge7.py
-# Documentation                 Chap-GPT slightly helped here https://thepythoncode.com/article/encrypt-decrypt-files-symmetric-python#file-encryption
+# Documentation                 Chap-GPT slightly helped here https://chat.openai.com/share/b26dbd8e-7cae-481b-95a0-7319c79eeb8b
 
 # functions defined 
 def writekey():
