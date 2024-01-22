@@ -13,7 +13,7 @@ from scapy.all import IP, sr1, TCP, sr #, send, ARP, ICMP,
 # Date of latest revision:      01/22/2024
 # Purpose:                      create a python script that uses scapy
 # Execution:			        use sudo python3 ops401_challenge11.py
-# Documentation                 Chap-GPT slightly helped here 
+# Documentation                 Chap-GPT slightly helped here https://chat.openai.com/share/c53df25c-0033-4e96-84e5-c0d3fca7a0de https://scapy.readthedocs.io/en/latest/introduction.html 
 
 # difference between sr() and sr1() - sr1() only returns one packet that answered the sent packet.
 
