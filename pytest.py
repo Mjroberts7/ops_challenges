@@ -11,7 +11,7 @@ from scapy.all import ICMP, IP, sr1, TCP
 def ICMPscan(netadd):
 
     try:
-        ip_list = ipaddress.IPv4Network(netadd).hosts()
+        ip_list = ipaddress.IPv4Network(netadd)
     except ValueError:
         print("not correct address format")
         return
