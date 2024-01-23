@@ -15,26 +15,42 @@ import ops401_challenge11
 # Date of latest revision:      01/23/2024
 # Purpose:                      create a python script that uses ip address scanning
 # Execution:			        use python3 ops401_challenge12.py
-# Documentation                 Chap-GPT slightly helped here  and roger hubas demo script is from where i started at https://github.com/codefellows/seattle-cybersecurity-401d10/blob/main/class-12/challenges/DEMO.md
+# Documentation                 Chap-GPT slightly helped here https://chat.openai.com/share/b4937d7c-eeed-487e-be35-a03a876fcf1c  and roger hubas demo script is from where i started at https://github.com/codefellows/seattle-cybersecurity-401d10/blob/main/class-12/challenges/DEMO.md
 
 
-
-
-def ICMPscan(
-    network = input("What network address would you like to sweep(include CIDR block)?\n")
-    ip_list = ipaddress.IPv4Network(network).hosts()
+# Functions
+# ICMP scan for all hosts on a network
+def ICMPscan(netadd):
+    
+    try:
+        ip_list = ipaddress.IPv4Network(netadd).hosts()
+    except ValueError:
+        print("not correct address format")
+        return
+        
     hosts_count = 0
+    
+    broadcastaddress = "192.168.2.1"
+    loopback = "127.0.0.1"
+    if netadd[-2:] == "/24":
+        ip_list = [ip_list for ip in ip_list if ip != loopback and ip != broadcastaddress]
 
     for host in ip_list:
-        print("Pinging", str(host), "- please wait...")
-        respont = sr1(
-            IP(dst=str(host))/ICMP()
-            timeout=2,
-            verbose=0
-        )
-)
+        try:
+            print(f'Pinging {str(host)}')
+            response = sr1(
+                IP(dst=str(host))/ICMP(),
+                timeout=2,
+                verbose=0
+            )
+            print(response)
+        except scapy.all.sr1.error as e1:
+            print(f'sr1 Error: {host}: {e1}')
+        except Exception as e:
+            print(f'Error: ping did not work {e}')
 
-def TCPscan(
+# The TCP scan 
+def TCPscan():
     
     # The host IP
     host = IP()
@@ -70,4 +86,13 @@ def TCPscan(
             print(f"port {p} is filtered and dropped")
             print(tcp_request.show())
 
-)
+
+if __name__ == "__main__":
+    question = int(input("input 1 or 2: ping(1) or TCP(2)? ")
+    if question == int(1):
+        network = str(input("Network address + CIDR block?\n"))
+        ICMPscan(network)
+    elif question == int(2):
+        TCPscan()
+    else:
+        print("try again")

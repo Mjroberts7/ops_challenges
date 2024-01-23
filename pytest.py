@@ -9,7 +9,7 @@ from scapy.all import ICMP, IP, sr1, TCP
 
 # functions
 def ICMPscan(netadd):
-
+    
     try:
         ip_list = ipaddress.IPv4Network(netadd).hosts()
     except ValueError:
@@ -33,8 +33,10 @@ def ICMPscan(netadd):
                 verbose=0
             )
             print(response)
+        except scapy.all.sr1.error as e1:
+            print(f'sr1 Error: {host}: {e1}')
         except Exception as e:
-            print(f'Error: ping did not work')
+            print(f'Error: ping did not work {e}')
 
 
 if __name__ == "__main__":
