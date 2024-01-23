@@ -1,34 +1,42 @@
 # this file is to be testing breakdowns of certain code snippets 
+import ipaddress
+from scapy.all import ICMP, IP, sr1, TCP
+
+# Variables
+
+# Lists
 
 
-from cryptography.fernet import Fernet
+# functions
+def ICMPscan(netadd):
 
-# This line writes creates an encryption key called encKey.
-# It then opens the key value of encKey and writes it to binary.
-def writekey():
-    encKey = Fernet.generate_key()
-    with open("encKey.key", "wb") as key_file:
-        key_file.write(encKey)
+    try:
+        ip_list = ipaddress.IPv4Network(netadd).hosts()
+    except ValueError:
+        print("not correct address format")
+        return
+        
+    hosts_count = 0
+    
+    broadcastaddress = "192.168.2.1"
+    loopback = "127.0.0.1"
+    if network[-1:-2] == 24:
+        ip_list = ip_list - loopback
+        ip_list = ip_list - broadcastaddress
 
-# this is a function that calls for the key so we dont have to create it every time with writekey.
-def loadkey():
-    return open("encKey.key", "rb").read()
+    for host in ip_list:
+        try:
+            print(f'Pinging {str(host)}')
+            response = sr1(
+                IP(dst=str(host))/ICMP(),
+                timeout=2,
+                verbose=0
+            )
+            print(response)
+        except Exception as e:
+            print(f'Error: ping did not work')
 
-# This is calling the function that writes the encryption key
-writekey()
 
-# this is assigning a variable the function that reads the key
-key = loadkey()
-
-# here we are creating a string that we are going to encrypt
-message = str(input("what would you like to put? ")).encode()
-print(message)
-
-# if __name__ == "__main__"
-f = Fernet(key)
-
-encMessage = f.encrypt(message)
-print(encMessage)
-
-decMessage = f.decrypt(encMessage)
-print(decMessage)
+if __name__ == "__main__":
+    network = str(input("Network address + CIDR block?\n"))
+    ICMPscan(network)
