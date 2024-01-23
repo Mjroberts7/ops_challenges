@@ -6,22 +6,21 @@
 # import time
 # import sys
 # from cryptography.fernet import Fernet
-from scapy.all import IP, sr1, TCP, ICMP, # sr, send, ARP, 
+from scapy.all import IP, sr1, TCP, ICMP#, sr, send, ARP
 import ipaddress
-import ops401_challenge11
 
 # Script Name:                  ops401_challenge12.py
 # Author:                       Michael Roberts 
 # Date of latest revision:      01/23/2024
-# Purpose:                      create a python script that uses ip address scanning
-# Execution:			        use python3 ops401_challenge12.py
-# Documentation                 Chap-GPT slightly helped here https://chat.openai.com/share/b4937d7c-eeed-487e-be35-a03a876fcf1c  and roger hubas demo script is from where i started at https://github.com/codefellows/seattle-cybersecurity-401d10/blob/main/class-12/challenges/DEMO.md
+# Purpose:                      create a python script that uses ip address scanning or tcp
+# Execution:			        have to run as sudo python3 ops401_challenge12.py
+# Documentation                 Chap-GPT slightly helped here https://chat.openai.com/share/b4937d7c-eeed-487e-be35-a03a876fcf1c and roger hubas demo script is from where i started at https://github.com/codefellows/seattle-cybersecurity-401d10/blob/main/class-12/challenges/DEMO.md
 
 
 # Functions
 # ICMP scan for all hosts on a network
 def ICMPscan(netadd):
-    
+    # implemented error handling to show if there is a problem with the initial network entered then it will show it
     try:
         ip_list = ipaddress.IPv4Network(netadd).hosts()
     except ValueError:
@@ -29,12 +28,12 @@ def ICMPscan(netadd):
         return
         
     hosts_count = 0
-    
+    # updating ip list with not the loopback or broadcast address
     broadcastaddress = "192.168.2.1"
     loopback = "127.0.0.1"
     if netadd[-2:] == "/24":
         ip_list = [ip_list for ip in ip_list if ip != loopback and ip != broadcastaddress]
-
+    # iterating over pinging every item in list. added error handling to show what the errors are. 
     for host in ip_list:
         try:
             print(f'Pinging {str(host)}')
@@ -88,7 +87,7 @@ def TCPscan():
 
 
 if __name__ == "__main__":
-    question = int(input("input 1 or 2: ping(1) or TCP(2)? ")
+    question = int(input("input 1 or 2: ping(1) or TCP(2)? "))
     if question == int(1):
         network = str(input("Network address + CIDR block?\n"))
         ICMPscan(network)
