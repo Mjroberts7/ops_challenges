@@ -19,12 +19,11 @@ import ipaddress
 
 # Functions
 # ICMP scan for all hosts on a network
-def ICMPscan(netadd, c):
-    templist = [netadd, '/', c]
-    net = ' '.join(templist)
+def ICMPscan(netadd):
+
     # implemented error handling to show if there is a problem with the initial network entered then it will show it
     try:
-        ip_list = ipaddress.IPv4Network(net).hosts()
+        ip_list = ipaddress.IPv4Network(netadd).hosts()
     except ValueError:
         print("not correct address format")
         return
@@ -35,7 +34,7 @@ def ICMPscan(netadd, c):
     # updating ip list with not the loopback or broadcast address
     broadcastaddress = "192.168.2.1"
     loopback = "127.0.0.1"
-    if c == "24":
+    if netadd[-2:] == "24":
         ip_list = [ip_list for ip in ip_list if ip != loopback and ip != broadcastaddress]
     # iterating over pinging every item in list. added error handling to show what the errors are. 
     for host in ip_list:
@@ -88,9 +87,8 @@ def TCPscan(n):
 
 
 if __name__ == "__main__":
-    network = str(input("Network address minus CIDR block? "))
-    cidr = str(input("CIDR block? "))
-    ICMPscan(network, cidr)
+    network = str(input("Network address + CIDR block? "))
+    ICMPscan(network)
 
     
    # int(reply.getlayer(ICMP).code)
