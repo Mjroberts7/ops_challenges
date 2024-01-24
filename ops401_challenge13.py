@@ -20,8 +20,8 @@ import ipaddress
 # Functions
 # ICMP scan for all hosts on a network
 def ICMPscan(netadd, c):
-    
-    net = ' '.join(netadd, '/', c)
+    templist = [netadd, '/', c]
+    net = ' '.join(templist)
     # implemented error handling to show if there is a problem with the initial network entered then it will show it
     try:
         ip_list = ipaddress.IPv4Network(net).hosts()
