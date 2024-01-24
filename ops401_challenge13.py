@@ -21,7 +21,7 @@ import ipaddress
 # ICMP scan for all hosts on a network
 def ICMPscan(netadd, c):
     
-    net = str(netadd + '/' + c)
+    net = ' '.join(netadd, '/', c)
     # implemented error handling to show if there is a problem with the initial network entered then it will show it
     try:
         ip_list = ipaddress.IPv4Network(net).hosts()
@@ -38,12 +38,10 @@ def ICMPscan(netadd, c):
     if c == "24":
         ip_list = [ip_list for ip in ip_list if ip != loopback and ip != broadcastaddress]
     # iterating over pinging every item in list. added error handling to show what the errors are. 
-        
     for host in ip_list:
         try:
             print(f'Pinging {str(host)}')
-            ip = IP(dst=str(host))
-            response = sr1(ip/ICMP(), timeout=2, verbose=0)
+            response = sr1(IP(dst=str(host))/ICMP(), timeout=2, verbose=0)
             if response is not None and int(response.getlayer(ICMP).code) in blocklist:
                 print('host is blocking ping')
             elif response is not None:
@@ -53,8 +51,8 @@ def ICMPscan(netadd, c):
                 TCPscan(host)
             else:
                 print('host down')    
-        except scapy.all.sr1.error as e1:
-            print(f'sr1 Error: {host}: {e1}')
+        #except scapy.all.sr1.error as e1:
+        #    print(f'sr1 Error: {host}: {e1}')
         except Exception as e:
             print(f'Error: ping did not work {e}')
     return f'{hosts_count} is up and running'
