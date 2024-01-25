@@ -71,7 +71,7 @@ def TCPscan(n):
 
     # sends a customizable TCP request
     for p in specific_ports:
-        tcp_request = sr1(IP(dst=w)/TCP(dport=p, flags='S'), timeout=1, verbose=0)
+        tcp_request = sr1(IP(dst=w)/TCP(sport=int(p), dport=int(p), flags='S'), timeout=1, verbose=0)
     
         if tcp_request[TCP].flags == 0x12:
             # if you want to send an RST(reset) packet to close an open connection uncomment this one out
