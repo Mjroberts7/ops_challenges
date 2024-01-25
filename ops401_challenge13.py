@@ -14,7 +14,7 @@ import ipaddress
 # Date of latest revision:      01/24/2024
 # Purpose:                      create a python script that uses tcp/ip scanning 
 # Execution:			        have to run as sudo python3 ops401_challenge13.py
-# Documentation                 Chap-GPT slightly helped here 
+# Documentation                 tried to get Chap-GPT help but didnt really. it slightly helped here https://chat.openai.com/share/93efb0e4-3244-4840-a6d3-4a491a0a8fac
 # Documentation                 I got information for line 45 through subtropicalhorsebacks 40112.py script
 
 # Functions
