@@ -36,12 +36,13 @@ def ICMPscan(netadd):
     loopback = "127.0.0.1"
     if netadd[-2:] == "24":
         ip_list = [ip_list for ip in ip_list if ip != loopback and ip != broadcastaddress]
+
     # iterating over pinging every item in list. added error handling to show what the errors are. 
     for host in ip_list:
         try:
             print(f'Pinging {str(host)}')
             response = sr1(IP(dst=str(host))/ICMP(), timeout=2, verbose=0)
-            if response is not None and ICMP in response and hasattr(response[ICMP], 'code') and int(response[ICMP].code) in blocklist:
+            if response is not None and response.haslayer(ICMP) and hasattr(response[ICMP], 'code') and int(response[ICMP].code) in blocklist:
                 print('host is blocking ping')
             elif response is not None:
                 print(response.show())
