@@ -32,7 +32,7 @@ def ICMPscan(netadd):
     hostlist = []
     blocklist = [1, 2, 3, 9, 10, 13]
     # updating ip list with not the loopback or broadcast address
-    broadcastaddress = "192.168.2.1"
+    broadcastaddress = "192.168.1.1"
     loopback = "127.0.0.1"
     if netadd[-2:] == "24":
         ip_list = [ip_list for ip in ip_list if ip != loopback and ip != broadcastaddress]
@@ -41,7 +41,7 @@ def ICMPscan(netadd):
         try:
             print(f'Pinging {str(host)}')
             response = sr1(IP(dst=str(host))/ICMP(), timeout=2, verbose=0)
-            if response is not None and int(response.getlayer(ICMP).code) in blocklist:
+            if response is not None and ICMP in response and hasattr(response[ICMP], 'code') and int(response[ICMP].code) in blocklist:
                 print('host is blocking ping')
             elif response is not None:
                 print(response.show())
@@ -91,4 +91,3 @@ if __name__ == "__main__":
     ICMPscan(network)
 
     
-   # int(reply.getlayer(ICMP).code)
