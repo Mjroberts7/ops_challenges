@@ -66,12 +66,13 @@ def get_pass(guess):
     password = getpass.getpass(prompt="password: ") or guess
     return password
 
-def ssh_connect():
+def ssh_connect(guessing):
     port = 22
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    checked_password = get_pass(guessing)
     try:
-        ssh.connect(get_host(), port, get_user(), get_pass())
+        ssh.connect(get_host(), port, get_user(), checked_password)
         stdin, stdout, stderr = ssh.exec_command("whoami")
         time.sleep(2)
         output = stdout.read()
@@ -85,6 +86,7 @@ def ssh_connect():
         time.sleep(2)
         output = stdout.read()
         print(output)
+        return True
 
     except paramiko.AuthenticationException as e:
         print('Authentication failed', e) 
@@ -105,10 +107,9 @@ if __name__ == "__main__":
         elif chk == int(2):
             check_filepath(listed_words)
         elif chk == int(3):
-            for word in listed_words:
-                ssh_connect.get_pass(word)
-                if ssh_connect() == True:
-                    pass
+            for word in passwords:
+                if ssh_connect(word) == True:
+                    break
 
         like_to_continue = input("would you like to continue checking? ")
         
