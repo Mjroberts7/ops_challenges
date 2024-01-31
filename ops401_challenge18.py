@@ -4,8 +4,8 @@
 import time
 import paramiko
 import getpass
-# from zipfile import ZipFile
-import zipfile
+from zipfile import ZipFile
+
 
 # Script Name:                  ops401_challenge18.py
 # Author:                       Michael Roberts 
