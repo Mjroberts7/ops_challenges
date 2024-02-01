@@ -36,7 +36,7 @@ def check_for_word(words):
     user_ans = input('Enter a word: ')
     lower_answer = user_ans.lower()
     if lower_answer in words:
-        print('word is in dict')
+        print(f'{lower_answer} is in dict')
     else:
         print('word not in dict')
 
@@ -48,7 +48,7 @@ def check_filepath(path):
         with open(path, 'r') as file2:
             for line in file:
                 if line == line in file2:
-                    print("string in file is in the pass file")
+                    print(f"{line} in file is in the pass file")
                 else:
                     print('string in file is not in pass file')
                 # time.sleep(1)    
@@ -109,8 +109,9 @@ if __name__ == "__main__":
     passwords = load_ext_file(listed_words)
     load_ext_file(listed_words)
     while True:
-        print('option 1:compare string\noption 2:compare string in filepath\noption 3: ssh check\noption 4: brute force zipped file')
+        print('option 1: compare string\noption 2: compare string in filepath\noption 3: ssh check\noption 4: brute force zipped file')
         chk = int(input('option[1], option[2], option[3] or option[4]? '))
+        time.sleep(1)
         if chk == int(1):
             check_for_word(passwords)
         elif chk == int(2):
@@ -124,12 +125,13 @@ if __name__ == "__main__":
             with open(listed_words, 'rb') as file:
                 for word in file:
                     try:
-                        with zipfile.ZipFile(zipped_file) as zf:
+                        with ZipFile(zipped_file) as zf:
                             zf.extractall(pwd=word.strip())
                             print(f'password = {word.decode()}')
                             break 
                     except RuntimeError as e:
                         print(f'{e}')
+                        time.sleep(1)
                          
         like_to_continue = input("would you like to continue checking? ")
         
