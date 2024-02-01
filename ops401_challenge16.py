@@ -33,7 +33,7 @@ def check_for_word(words):
     user_ans = input('Enter a word: ')
     lower_answer = user_ans.lower()
     if lower_answer in words:
-        print('word is in dict')
+        print(f'{lower_answer} is in dict')
     else:
         print('word not in dict')
 
@@ -45,7 +45,7 @@ def check_filepath(path):
         with open(path, 'r') as file2:
             for line in file:
                 if line == line in file2:
-                    print("string in file is in the pass file")
+                    print(f"{line} is in the pass file")
                 else:
                     print('string in file is not in pass file')
                 # time.sleep(1)    
