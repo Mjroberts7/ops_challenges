@@ -53,7 +53,7 @@ else:
 '''
 # this is the second way to create and open a file for the output 
 with open(html_file, 'w') as file:
-    file.write(second_response)
+    file.write(str(second_response))
 
 
 webbrowser.get("firefox").open("fileforcookierequest.html")
