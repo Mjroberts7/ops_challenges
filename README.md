@@ -1,6 +1,6 @@
 Scripts for multiple use cases using Bash, Powershell, Python, Batch, and NSE
 
-## 201 OP's challenges 
+## 201 OP's challenges - 
 1. [first bash shell file](Ops-201-Foundations-of-Computer-Operations/helloworld.sh) - This is the first challenge which was simply creating a variable and outputting it
 2. [first function in bash file](Ops-201-Foundations-of-Computer-Operations/OPs201_function1.sh) - Created a function that outputs the three last instances of login history
 3. [first array in bash file](Ops-201-Foundations-of-Computer-Operations/arrays_challenge.sh) - Created an array using a function that utilized a for loop to make a folder, add that folder to the array, then make and put a text file within that folder
@@ -16,7 +16,7 @@ Scripts for multiple use cases using Bash, Powershell, Python, Batch, and NSE
 I am learning these skills to strengthen my scripting/coding skills. I am hoping these will come in handy in a career setting in any field. I am learning multiple scripting languages to help with automation/efficiency. Some of these can help when you are tweaking settings in administration or security. These were the first files I created with code fellows.
 
 ## 301 OP's challenges
-1. [Append and Log Files](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge1.py)
+1. [Append and Log Files](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge1.sh)
 2. [Changing folder/file permissions with chmod](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge2.py)
 3. [Bash multi-conditional](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge3.py)
 4. [Compress/truncate and check file sizes](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge4.py)
