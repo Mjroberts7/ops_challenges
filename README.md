@@ -17,9 +17,9 @@ I am learning these skills to strengthen my scripting/coding skills. I am hoping
 
 ## 301 OP's challenges
 1. [Append and Log Files](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge1.sh)
-2. [Changing folder/file permissions with chmod](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge2.py)
-3. [Bash multi-conditional](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge3.py)
-4. [Compress/truncate and check file sizes](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge4.py)
+2. [Changing folder/file permissions with chmod](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge2.sh)
+3. [Bash multi-conditional](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge3.sh)
+4. [Compress/truncate and check file sizes](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge4.sh)
 5. [Whoami, IP Addr, lshw](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge5.py)
 6. [Create recursive Dir](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge6.py)
 7. [List and Dictionary Examples](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge7.py)
