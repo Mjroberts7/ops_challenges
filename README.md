@@ -1,4 +1,4 @@
-# OPS_challenges
+# OPS_challenges - Scripts for multiple use cases using Bash, Powershell, and Python
 
 ### 201 ops challenges 
 1. This is the first challenge that was simply creating a variable and outputing it
