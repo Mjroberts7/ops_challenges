@@ -1,4 +1,5 @@
-Scripts for multiple use cases using Bash, Powershell, Python, Batch, and NSE
+Scripts for multiple use cases using Bash, Powershell, Python, Batch, and NSE 
+latest scripts and coding is at the bottom, Starts with OPs 201.
 
 ## 201 OP's challenges - 
 1. [first bash shell file](Ops-201-Foundations-of-Computer-Operations/helloworld.sh) - This is the first challenge which was simply creating a variable and outputting it
@@ -62,3 +63,9 @@ These are the files that I completed during my time with code fellows in their 3
 
 
 These Are the Scripts I wrote during my time in ops-401 The cybersecurity code fellows bootcamp. They offer a broad range of uses if you want to encrypt, hash, harden, scan, etc... I will continue to develop my skills and add to it. My passion for technology and cybersecurity will only continue to grow as will my arsenal of tools. 
+
+## Personal Growth
+These are some scripts and code snippets that I continue to build. They can help with CTF's, Hack the box, or just be handy to have.  
+
+1. [Python Ceaser Cipher](Personal_Growth/python_caeser.py)
+2. 
