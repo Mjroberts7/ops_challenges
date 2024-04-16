@@ -3,6 +3,8 @@
 # Author:           Michael roberts
 # Date:             04/16/2024
 
+
+# This is a class for list operations 
 class ListOperations:
         def __init__(self):
             self.lst = [] 
@@ -31,17 +33,19 @@ class ListOperations:
             else:
                 print("command not recognized")
         
-# For each time print is inputed, the outputted list will be printed on a new line.
 if __name__ == '__main__':
     n = int(input())
     
     operations = ListOperations()
     
+    # Reads each line inputed according to n and executes the commands you choose by calling the ListOperations class
     for line in range(n):
         line = str(input()).strip()
         line = line.split()
         command = line[0]
         args = list(map(int, line[1:]))
+
+        # For each time print is inputed, the outputted list will be printed on a new line.
         if command == 'print':
             print(operations.lst)
         else:
