@@ -68,4 +68,5 @@ These Are the Scripts I wrote during my time in ops-401 The cybersecurity code f
 These are some scripts and code snippets that I continue to build. They can help with CTF's, Hack the box, or just be handy to have.  
 
 1. [Python Ceaser Cipher](Personal_Growth/python_caeser.py)
-2. 
+2. [Python Average from a Dictionary of users](Personal_Growth/python_avg_from_dict.py)
+3. [List Methods from a Class](Personal_Growth/list_methods.py)
