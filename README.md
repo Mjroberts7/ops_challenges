@@ -3,15 +3,15 @@ latest scripts and coding is at the bottom, Starts with OPs 201.
 
 ## 201 OP's challenges - 
 1. [first bash shell file](Ops-201-Foundations-of-Computer-Operations/helloworld.sh) - This is the first challenge which was simply creating a variable and outputting it
-2. [first function in bash file](Ops-201-Foundations-of-Computer-Operations/OPs201_function1.sh) - Created a function that outputs the three last instances of login history
+2. [first function in bash file](Ops-201-Foundations-of-Computer-Operations/bash_history.sh) - Created a function that outputs the three last instances of login history
 3. [first array in bash file](Ops-201-Foundations-of-Computer-Operations/arrays_challenge.sh) - Created an array using a function that utilized a for loop to make a folder, add that folder to the array, then make and put a text file within that folder
-4. [create a loop to get process IDs and kill them](Ops-201-Foundations-of-Computer-Operations/loops_week5.sh) - created a while loop. then grab the ID and kill it for a specified amount of times. 
-5. [write a conditional into a program](Ops-201-Foundations-of-Computer-Operations/week6_conditional.sh) - This created an empty array and a function that determined what to populate the array with a while loop with if conditionals determined when and what to do. 
-6. [displaying components from bash](Ops-201-Foundations-of-Computer-Operations/ops7.sh) - Grabbed a hardware component and displayed a fixed amount of information about that component.
+4. [create a loop to get process IDs and kill them](Ops-201-Foundations-of-Computer-Operations/for_and_while_loops.sh) - created a while loop. then grab the ID and kill it for a specified amount of times. 
+5. [write a conditional into a program](Ops-201-Foundations-of-Computer-Operations/file_or_folder_exists_check.sh) - This created an empty array and a function that determined what to populate the array with a while loop with if conditionals determined when and what to do. 
+6. [displaying components from bash](Ops-201-Foundations-of-Computer-Operations/display_component_information.sh) - Grabbed a hardware component and displayed a fixed amount of information about that component.
 7. [robocopied batch commands and explained them](Ops-201-Foundations-of-Computer-Operations/ops8_robocopy.md) - Description of a batch file that ran a robocopy command. 
-8. [individual PowerShell commands for EventLog tracking](Ops-201-Foundations-of-Computer-Operations/ops9_powershell.ps1) - Powershell Scripts that provided information from the Event Log 
-9. [individual PowerShell commands for GetProcess and applications](Ops-201-Foundations-of-Computer-Operations/ops10_powershell.ps1) - Powershell scripts that displays processes and start/stops applications.
-10. [individual PowerShell commands for Enable/Disabling features and rules](Ops-201-Foundations-of-Computer-Operations/ops11_endpoints.ps1) - Powershell scripts that enabled/disabled firewall settings, Windows features, and registry properties.
+8. [individual PowerShell commands for EventLog tracking](Ops-201-Foundations-of-Computer-Operations/eventLog_SystemInfo.ps1) - Powershell Scripts that provided information from the Event Log 
+9. [individual PowerShell commands for GetProcess and applications](Ops-201-Foundations-of-Computer-Operations/processes_method_info.ps1) - Powershell scripts that displays processes and start/stops applications.
+10. [individual PowerShell commands for Enable/Disabling features and rules](Ops-201-Foundations-of-Computer-Operations/endpoint_management.ps1) - Powershell scripts that enabled/disabled firewall settings, Windows features, and registry properties.
 
 
 I am learning these skills to strengthen my scripting/coding skills. I am hoping these will come in handy in a career setting in any field. I am learning multiple scripting languages to help with automation/efficiency. Some of these can help when you are tweaking settings in administration or security. These were the first files I created with code fellows.
