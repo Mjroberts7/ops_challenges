@@ -13,7 +13,7 @@ cp /var/log/syslog tempFile.txt
 #just made a folder, file, and copied the contents of the system logs into the file.
 
 #can change the path to whatever folder you want to move it to. 
-mv tempFile.txt /home/mjroberts/ops_challenges/tempFolder
+mv tempFile.txt ./tempFolder/
 
 currentDate=$(date +"%d-%m-%Y")
 

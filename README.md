@@ -17,7 +17,7 @@ latest scripts and coding is at the bottom, Starts with OPs 201.
 I am learning these skills to strengthen my scripting/coding skills. I am hoping these will come in handy in a career setting in any field. I am learning multiple scripting languages to help with automation/efficiency. Some of these can help when you are tweaking settings in administration or security. These were the first files I created with code fellows.
 
 ## 301 OP's challenges
-1. [Append and Log Files](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge1.sh)
+1. [Append and Log Files](Ops-301-Networking-and-Systems-Administration/syslog_copy_to_temp_location.sh)
 2. [Changing folder/file permissions with chmod](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge2.sh)
 3. [Bash multi-conditional](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge3.sh)
 4. [Compress/truncate and check file sizes](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge4.sh)
