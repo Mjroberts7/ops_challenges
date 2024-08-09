@@ -70,3 +70,6 @@ These are some scripts and code snippets that I continue to build. They can help
 1. [Python Ceaser Cipher](Personal_Growth/python_caeser.py)
 2. [Python Average from a Dictionary of users](Personal_Growth/python_avg_from_dict.py)
 3. [List Methods from a Class](Personal_Growth/list_methods.py)
+4. [Powershell Folder Compression](Personal_Growth/copy_and_compress_folder.ps1)
+5. [Switch Upper/Lower Case](Personal_Growth/swapped_case.py)
+6. [Windows Permission Modification](Personal_Growth/windows_permissions.ps1)
