@@ -14,22 +14,22 @@ latest scripts and coding is at the bottom, Starts with OPs 201.
 10. [individual PowerShell commands for Enable/Disabling features and rules](Ops-201-Foundations-of-Computer-Operations/endpoint_management.ps1) - Powershell scripts that enabled/disabled firewall settings, Windows features, and registry properties.
 
 
-I am learning these skills to strengthen my scripting/coding skills. I am hoping these will come in handy in a career setting in any field. I am learning multiple scripting languages to help with automation/efficiency. Some of these can help when you are tweaking settings in administration or security. These were the first files I created with code fellows.
+I am hoping these will come in handy in a career setting in any field. These are scripts to help with automation/efficiency. Some of these can help when you are tweaking settings in system/network administration or security.
 
 ## 301 OP's challenges
 1. [Append and Log Files](Ops-301-Networking-and-Systems-Administration/syslog_copy_to_temp_location.sh)
-2. [Changing folder/file permissions with chmod](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge2.sh)
-3. [Bash multi-conditional](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge3.sh)
-4. [Compress/truncate and check file sizes](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge4.sh)
-5. [Whoami, IP Addr, lshw](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge5.py)
-6. [Create recursive Dir](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge6.py)
-7. [List and Dictionary Examples](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge7.py)
-8. [String or Int comparison](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge8.py)
-9. [Create new txt file, print line, then delete](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge9.py)
-10. [psutil computer info](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge10.py)
-11. [URLs and http methods](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge11.py)
-12. [New ActiveDirectory user automation](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge12.py)
-13. [Malware Analysis](Ops-301-Networking-and-Systems-Administration/ops-301d14_Challenge13.py)
+2. [Changing folder/file permissions with chmod](Ops-301-Networking-and-Systems-Administration/modify_permissions_for_path.sh)
+3. [Bash multi-conditional](Ops-301-Networking-and-Systems-Administration/show_ip_hello_or_ping.sh)
+4. [Compress/truncate and check file sizes](Ops-301-Networking-and-Systems-Administration/compress_and_show_size.sh)
+5. [Whoami, IP Addr, lshw](Ops-301-Networking-and-Systems-Administration/whoami_ipa_or_lshw.py)
+6. [Create recursive Dir](Ops-301-Networking-and-Systems-Administration/make_walk_rem_dir.py)
+7. [List and Dictionary Examples](Ops-301-Networking-and-Systems-Administration/list_tuple_set_dict.py)
+8. [String or Int comparison](Ops-301-Networking-and-Systems-Administration/str_or_int_comparison.py)
+9. [Create new txt file, print line, then delete](Ops-301-Networking-and-Systems-Administration/read_and_write_to_file.py)
+10. [psutil computer info](Ops-301-Networking-and-Systems-Administration/psutil_output.py)
+11. [URLs and http methods](Ops-301-Networking-and-Systems-Administration/requests_http_methods.py)
+12. [New ActiveDirectory user automation](Ops-301-Networking-and-Systems-Administration/Active_Directory_Add_New_User.py)
+13. [Malware Analysis](Ops-301-Networking-and-Systems-Administration/Malware_example.py)
 
 These are the files that I completed during my time with code fellows in their 301 Networking and System Administration courses. Files include System Admin/networking scripts.
 
